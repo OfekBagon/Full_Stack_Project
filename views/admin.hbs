@@ -1,0 +1,48 @@
+<sapn style="color:rgb(19, 43, 109); font-size: 25px;"><b> Welcome {{fname}} {{lname}}!</b></span>
+
+
+
+<p><b><span style="color:rgb(19, 43, 109);">
+    <marquee direction = "right">Here are your published messages:</marquee>
+</span></b></p>
+
+{{#if messages}} 
+    <table class="striped">
+        <thead>
+            <tr>
+                <th><b>Title</b></th>
+                <th><b>Create Date</b></th>
+                <th><b>Name</b></th>
+                <th><b>Options</b></th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each messages}}
+                <tr>
+                    <td><a href="/messages/{{_id}}" style="color: darkblue !important;">{{title}}</a></td> 
+                    <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td> 
+                    <td><span class="dash-Name">{{user.displayName}}</span></td>
+                    <td>
+                        <a href="/messages/edit/{{_id}}" style="background-color:MediumSeaGreen" class="btn btn-float">
+                            <i class="fas fa-edit"></i>
+                        </a>
+
+                        <form action="/admin/{{_id}}" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn red">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}} 
+<p>No one published any messages yet.</p>
+{{/if}}
+
+
+

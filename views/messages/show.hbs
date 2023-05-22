@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col s12 m8">
+        <h3>{{message.title}}
+            <small>{{{editIcon message.user user message._id false}}}</small>
+        </h3>
+        <div class="card message">
+            <div class="card-content">
+                <span class="card-title">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
+                {{{message.body}}}
+            </div>
+        </div>
+    </div>
+    <div class="col s14 m4">
+        <div class="card center-align">
+            <div class="card-content">
+                <span class="card-title"><b>{{message.user.displayName}}</b></span>
+                <img src="{{message.user.image}}" class="circle responsive-img img-small">
+            </div>
+            <div class="card-action">
+                <a href="/messages/user/{{message.user._id}}" style="color:grey !important;">More From {{message.user.firstName}} </a>
+            </div>
+            {{#if isAdmin}}
+                {{#unless sameUser}}
+                    <div class="card-action"> <!--delete all users-->
+                        <form action="/user/{{message.user._id}}" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn blue">
+                                {{!-- <i class="fas fa-trash"></i> --}}
+                                Delete user
+                            </button>
+                        </form>
+                    </div>
+                {{/unless}}
+            {{/if}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+
+
+p {
+    text-align: center;
+
+}
+
+.login-container{
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.fa-small {
+    font-size: 16px !important;
+}
+
+.btn-float {
+    float: left;
+    margin-right: 10px;
+}
+.img-small {
+    width:180px;
+}
+
+@media only screen and (max-width: 375px), only screen and (max-device-width: 1920px){
+    body { background-color: rgb(220, 230, 227); 
+        background-image: url("backgruondPIC.jpeg");}
+        #navti{
+            font-size: 25px;
+        }
+}
+body {
+    background-image: url("backgruondPIC.jpeg");
+  }
+
+.btn {
+    background-color: rgb(162, 186, 203);
+    margin-top: 5%;
+}
+
+.w3-round-xlarge{
+    background-color:#1565c0;
+    color: aliceblue;
+}
+
+.nanvid{
+    background-color:#1565c0;
+    color: aliceblue;
+
+}
+
+.like{
+    box-shadow: none;
+    color: #1565c0;
+    background:transparent
+}
+.like:hover,
+.like:focus
+{
+    color:red;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+#mobile-demo{
+    background-color: #1565c0 !important;
+    color: red !important;
+}
+
+ a {
+     color: whitesmoke !important;
+ }
+
+ footer {
+     padding-top: 90%;
+     position:inherit;
+     text-align: center;
+ }
+
+#editt {
+    margin-top: 40px;
+}

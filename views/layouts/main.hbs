@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>Blue Towers - Neighbors</title>
+</head>
+
+<body>
+    {{> _header}} 
+    {{>_add_btn}}
+
+    <div class="container"> 
+            <div class="w3-round-xlarge">
+                 <p><i><b>Hello neighbor, This is the perfect place for you to meet your neighbor's,
+                   share information,thoughts and hopes together!</b></i></p>
+             </div> 
+        {{{body}}} <!-- output the view, whatever view we are looking at will be displayed here. -->
+    </div>
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.16.1/ckeditor.js" integrity="sha512-2nFxKVmFuBhAR45DBnAANBjtxzf7z0m6wRU7NOquxibA6efrQpUtdjFT4wzqewqTI3/cCNbBzJNUtu1NxjFiKw==" crossorigin="anonymous" ></script>
+
+    <script> 
+        M.Sidenav.init(document.querySelector('.sidenav'))
+        M.FormSelect.init(document.querySelector('#status')) 
+        CKEDITOR.replace('body', { 
+            plugins: 'wysiwygarea, toolbar, basicstyles, link, smiley,image'
+        })
+    </script>
+</body>
+
+<footer class="bg-dark text-center text-lg-start ">
+    <div class="text-center p-4 text-light " style="background-color: #1565c0; ">
+        Having issues with our website? click and contact our support team on instagram     
+        <a class="text-light " href="https://www.instagram.com/dordavid99/ "> Support Team </a>
+    </div>
+</footer>
+
+</html>
